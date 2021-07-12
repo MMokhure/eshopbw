@@ -21,6 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/dataTables.bootstrap4.min.css">
 	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/responsive.bootstrap4.min.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
@@ -264,7 +265,7 @@
 				<ul id="accordion-menu">
 					<li class="dropdown">
 						<li>
-							<a href="index.html" class="dropdown-toggle no-arrow">
+							<a href="{{url('home')}}" class="dropdown-toggle no-arrow">
 								<span class="micon dw dw-house1"></span><span class="mtext">HOME</span>
 							</a>
 						</li>
@@ -280,13 +281,15 @@
 							
 						</ul>
 					</li>
+
+            
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon dw dw-library"></span><span class="mtext">INVENTORY</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="basic-table.html">Manage Inventory</a></li>
-							<li><a href="datatable.html">Add New Inventory</a></li>
+							<li><a  href="basic-table.html">Manage Inventory</a></li>
+							<li><a href="#exampleModal"  data-bs-toggle="modal" >Add New Inventory</a></li>
 						</ul>
 					</li>
 					<li>
@@ -537,6 +540,68 @@
 					</tbody>
 				</table>
 			</div>
+
+<!--Start Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Inventory</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="form-group col-md-6">
+                    <label for="type" class="search-container__label">SELECT INVENTORY TYPE</label>
+                    <select class="form-control search-container__input" id="type" name="type" required>
+                     
+                    <option value="Computer"> Computer</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Printer">Printer</option>
+                    <option value="Server">Server</option>
+                    <option value="Scanner">Scanner</option>
+
+
+                    </select>
+                  </div>
+                  <div class="form-group col-md-12">
+                  
+                  <label for="memory" class="register-container__label">Enter Model/Make:</label>
+                  <input name="model" type="text" class="form-control register-container__input" id="model" required>
+                  </div>
+
+                  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter RAM:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter ROM:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Other Specs:</label>
+            <textarea name="specs" class="form-control" id="specs"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add Inventory</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Modal-->
+
+
+
+
 			<div class="footer-wrap pd-20 mb-20 card-box">
 			AOJ IMS was developed and managed By  <a href="#" target="_blank">AOJ IT UNIT</a>
 			</div>

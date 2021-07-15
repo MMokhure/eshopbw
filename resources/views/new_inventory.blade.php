@@ -50,7 +50,7 @@ function fun1() {
     }
     else if(xx==4)
     {
-        document.getElementById('form3').style.display = "block";
+        document.getElementById('form4').style.display = "block";
     }
     else
     {
@@ -857,7 +857,7 @@ function fun2()//to hide all form elements
 
 <!---------------------------------laptop form------------------------------------------------------->
 
-<form name="secondform" id="form2" action="">
+<form name="secondform" id="form4" action="">
 		  <div class="form-title">
 					 <h4>Add Laptop</h4>
 					 </div>
@@ -931,9 +931,7 @@ function fun2()//to hide all form elements
 <!--End Modal-->
 
 
-
-
-			<div class="footer-wrap pd-20 mb-20 card-box">
+		<div class="footer-wrap pd-20 mb-20 card-box">
 			AOJ IMS was developed and managed By  <a href="#" target="_blank">AOJ IT UNIT</a>
 			</div>
 		</div>

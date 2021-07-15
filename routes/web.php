@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 Route::get('home',[HomeController::class, 'index'])->name('home.index');
 Route::get('new_user',[HomeController::class, 'adduser'])->name('new_user.adduser');
+Route::get('new_inventory',[HomeController::class, 'addinventory'])->name('new_inventory.addinventory');

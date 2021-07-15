@@ -32,6 +32,39 @@
 
 		gtag('config', 'UA-119386393-1');
 	</script>
+<script type="text/javascript">
+function fun1() {
+    var xx = document.getElementById('select1').value;
+    fun2();
+    if(xx==1)
+    {
+        document.getElementById('form1').style.display = "block";
+    }
+    else if(xx==2)
+    {
+        document.getElementById('form2').style.display = "block";
+    }
+    else if(xx==3)
+    {
+        document.getElementById('form3').style.display = "block";
+    }
+    else if(xx==4)
+    {
+        document.getElementById('form3').style.display = "block";
+    }
+    else
+    {
+    }
+}
+function fun2()//to hide all form elements
+{
+    var x = document.getElementsByTagName("form");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+}
+</script>   
 </head>
 <body>
 	<div class="pre-loader">
@@ -255,19 +288,7 @@
 
 	<div class="main-container">
 		<div class="pd-ltr-20">
-			<div class="card-box pd-20 height-100-p mb-30">
-				<div class="row align-items-center">
-					<div class="col-md-4">
-						<img src="vendors/images/banner-img.png" alt="">
-					</div>
-					<div class="col-md-8">
-						<h4 class="font-20 weight-500 mb-10 text-capitalize">
-							Welcome back <div class="weight-600 font-30 text-blue">Johnny Brown!</div>
-						</h4>
-						<p class="font-18 max-width-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde hic non repellendus debitis iure, doloremque assumenda. Autem modi, corrupti, nobis ea iure fugiat, veniam non quaerat mollitia animi error corporis.</p>
-					</div>
-				</div>
-			</div>
+	
 			<div class="row">
 				<div class="col-xl-3 mb-30">
 					<div class="card-box height-100-p widget-style1">
@@ -325,8 +346,277 @@
 			<div class="row">
 				<div class="col-xl-8 mb-30">
 					<div class="card-box height-100-p pd-20">
-						<h2 class="h4 mb-20">Activity</h2>
-						<div id="chart5"></div>
+						<h2 class="h4 mb-20">Add Inventory</h2>
+						<div id="chart">
+
+        <label for="type" class="search-container__label">INVENTORY TYPE</label>
+<select id="select1" onchange="fun1()">
+<option >Select Inventory Type</option>
+<option value="1">Computer</option>
+<option value="2">Laptop</option>
+<option value="3">Scanner</option>
+<option value="4">Printer</option>
+<option value="5">Form 2</option>
+
+
+</select>
+
+
+<form  method="post"  name="firstform" id="form1" action="">
+<label>Add Computer</label><br>
+
+				  <div class="form-group col-md-12">
+                  
+                  <label for="memory" class="register-container__label">Enter Model/Make:</label>
+                  <input name="model" type="text" class="form-control register-container__input" id="model" required>
+                  </div>
+
+				  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Man Serial No.:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Govt Serial No.:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+
+
+                  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter RAM:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter ROM:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+				  <div class="form-group col-md-8">
+                    <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
+                    <select class="form-control search-container__input" id="type" name="type" required>
+					<option value="functional"> Select current status</option>
+					<option value="functional"> Functional</option>
+                    <option value="non-functional">Non-Functional</option>
+                    
+
+
+                    </select>
+                  </div>
+                 
+				 
+
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Other Specs:</label>
+            <textarea name="specs" class="form-control" id="specs"></textarea>
+          </div>
+		  <button type="button" name="submit" class="btn btn-primary">Add Inventory</button>
+</form>
+
+<!---------------------------------laptop form------------------------------------------------------->
+
+<form name="secondform" id="form2" action="">
+<label>Add Laptop</label><br>
+
+
+
+				  <div class="form-group col-md-12">
+                  
+                  <label for="memory" class="register-container__label">Enter Model/Make:</label>
+                  <input name="model" type="text" class="form-control register-container__input" id="model" required>
+                  </div>
+
+				  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Man Serial No.:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Govt Serial No.:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+
+
+                  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter RAM:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter ROM:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+				  <div class="form-group col-md-8">
+                    <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
+                    <select class="form-control search-container__input" id="type" name="type" required>
+					<option value="functional"> Select current status</option>
+					<option value="functional"> Functional</option>
+                    <option value="non-functional">Non-Functional</option>
+                    
+
+
+                    </select>
+                  </div>
+                 
+				 
+
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Other Specs:</label>
+            <textarea name="specs" class="form-control" id="specs"></textarea>
+          </div>
+		  <button type="button" name="submit" class="btn btn-primary">Add Inventory</button>
+       	  
+		<!-----------------------end laptop form----------------------------------->
+
+</form>
+
+
+<!---------------------------------Scanner form------------------------------------------------------->
+
+<form name="secondform" id="form3" action="">
+<label>Add Scanner</label><br>
+
+
+
+				  <div class="form-group col-md-12">
+                  
+                  <label for="memory" class="register-container__label">Enter Model/Make:</label>
+                  <input name="model" type="text" class="form-control register-container__input" id="model" required>
+                  </div>
+
+				  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Man Serial No.:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Govt Serial No.:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+
+
+                  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter RAM:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter ROM:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+				  <div class="form-group col-md-8">
+                    <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
+                    <select class="form-control search-container__input" id="type" name="type" required>
+					<option value="functional"> Select current status</option>
+					<option value="functional"> Functional</option>
+                    <option value="non-functional">Non-Functional</option>
+                    
+
+
+                    </select>
+                  </div>
+                 
+				 
+
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Other Specs:</label>
+            <textarea name="specs" class="form-control" id="specs"></textarea>
+          </div>
+		  <button type="button" name="submit" class="btn btn-primary">Add Inventory</button>
+       	  
+		<!-----------------------end Scanner form----------------------------------->
+
+</form>
+
+<!---------------------------------Printer form------------------------------------------------------->
+
+<form name="secondform" id="form4" action="">
+<label>Add Printer</label><br>
+
+
+
+				  <div class="form-group col-md-12">
+                  
+                  <label for="memory" class="register-container__label">Enter Model/Make:</label>
+                  <input name="model" type="text" class="form-control register-container__input" id="model" required>
+                  </div>
+
+				  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Man Serial No.:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Govt Serial No.:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+
+
+                  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter RAM:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter ROM:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+				  <div class="form-group col-md-8">
+                    <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
+                    <select class="form-control search-container__input" id="type" name="type" required>
+					<option value="functional"> Select current status</option>
+					<option value="functional"> Functional</option>
+                    <option value="non-functional">Non-Functional</option>
+                    
+
+
+                    </select>
+                  </div>
+                 
+				 
+
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Other Specs:</label>
+            <textarea name="specs" class="form-control" id="specs"></textarea>
+          </div>
+		  <button type="button" name="submit" class="btn btn-primary">Add Inventory</button>
+       	  
+		<!-----------------------end Printer form----------------------------------->
+
+</form>
+
+                        </div>
 					</div>
 				</div>
 				<div class="col-xl-4 mb-30">
@@ -507,7 +797,7 @@
                    
                  
 				 <div class="form-title">
-					 <h4>Add Desktop</h4>
+					 <h4>Add computer</h4>
 					 </div>
 				  <div class="form-group col-md-12">
                   
@@ -660,5 +950,8 @@
 	<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
 	<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
 	<script src="vendors/scripts/dashboard.js"></script>
+    <script type="text/javascript">
+fun2();//to hide form elements after page has loaded completely
+</script>
 </body>
 </html>

@@ -16,5 +16,10 @@ class HomeController extends Controller
         return view('new_user');
     }
 
+    public function addinventory()
+    {
+        return view('new_inventory');
+    }
+
 
 }

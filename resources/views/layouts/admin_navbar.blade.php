@@ -1,5 +1,6 @@
 
 	<div class="left-side-bar">
+		<br/>
 		<div class="brand-logo">
 			<a href="index.html">
 				<img src="vendors/images/aoj.png" alt="" class="dark-logo">
@@ -10,6 +11,8 @@
 			</div>
 		</div>
 		<div class="menu-block customscroll">
+			<br/>
+		
 			<div class="sidebar-menu">
 				<ul id="accordion-menu">
 					<li class="dropdown">
@@ -37,7 +40,7 @@
 							<span class="micon dw dw-library"></span><span class="mtext">INVENTORY</span>
 						</a>
 						<ul class="submenu">
-							<li><a  href="basic-table.html">Manage Inventory</a></li>
+							<li><a  href="{{url('manage_inventory')}}">Manage Inventory</a></li>
 							<li><a href="{{url('new_inventory')}}" >Add New Inventory</a></li>
 						</ul>
 					</li>

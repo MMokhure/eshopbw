@@ -21,5 +21,8 @@ class HomeController extends Controller
         return view('new_inventory');
     }
 
-
+    public function inventory()
+    {
+        return view('manage_inventory');
+    }
 }

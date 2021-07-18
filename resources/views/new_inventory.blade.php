@@ -67,21 +67,7 @@ function fun2()//to hide all form elements
 </script>   
 </head>
 <body>
-	<div class="pre-loader">
-		<div class="pre-loader-box">
-			<div class="loading-text">
-		<h1 style="color: rgb(154, 223, 255)">AOJ IMS </h1>	
-			</div>
-			<div class="loader-logo"><img src="vendors/images/aoj.png" alt=""></div>
-			<div class='loader-progress' id="progress_div">
-				<div class='bar' id='bar1'></div>
-			</div>
-			<div class='percent' id='percent1'>0%</div>
-			<div class="loading-text">
-				Wait! Loading...
-			</div>
-		</div>
-	</div>
+@include('layouts.pre-loader')
 
 	<div class="header">
 		<div class="header-left">
@@ -297,8 +283,8 @@ function fun2()//to hide all form elements
 								<div id="chart"></div>
 							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">2020</div>
-								<div class="weight-600 font-14">Contact</div>
+								<div class="h4 mb-0">Computers</div>
+								<div class="weight-600 font-14">200</div>
 							</div>
 						</div>
 					</div>
@@ -310,8 +296,8 @@ function fun2()//to hide all form elements
 								<div id="chart2"></div>
 							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">400</div>
-								<div class="weight-600 font-14">Deals</div>
+								<div class="h4 mb-0">Laptop</div>
+								<div class="weight-600 font-14">200</div>
 							</div>
 						</div>
 					</div>
@@ -323,8 +309,8 @@ function fun2()//to hide all form elements
 								<div id="chart3"></div>
 							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">350</div>
-								<div class="weight-600 font-14">Campaign</div>
+								<div class="h4 mb-0">Printers</div>
+								<div class="weight-600 font-14">200</div>
 							</div>
 						</div>
 					</div>
@@ -336,8 +322,8 @@ function fun2()//to hide all form elements
 								<div id="chart4"></div>
 							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">$6060</div>
-								<div class="weight-600 font-14">Worth</div>
+								<div class="h4 mb-0">Scanners</div>
+								<div class="weight-600 font-14">200</div>
 							</div>
 						</div>
 					</div>
@@ -349,17 +335,14 @@ function fun2()//to hide all form elements
 						<h2 class="h4 mb-20">Add Inventory</h2>
 						<div id="chart">
 
-        <label for="type" class="search-container__label">INVENTORY TYPE</label>
-<select id="select1" onchange="fun1()">
-<option >Select Inventory Type</option>
-<option value="1">Computer</option>
-<option value="2">Laptop</option>
-<option value="3">Scanner</option>
-<option value="4">Printer</option>
-<option value="5">Form 2</option>
-
-
-</select>
+        <label for="type" class="search-container__label">INVENTORY TYPE: </label>
+			<select id="select1" onchange="fun1()">
+			<option >Choose Inventory Type </option>
+			<option value="1">Computer</option>
+			<option value="2">Laptop</option>
+			<option value="3">Scanner</option>
+			<option value="4">Printer</option>
+			</select>
 
 
 <form  method="post"  name="firstform" id="form1" action="">
@@ -464,7 +447,7 @@ function fun2()//to hide all form elements
 				  <div class="form-group col-md-8">
                     <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
                     <select class="form-control search-container__input" id="type" name="type" required>
-					<option value="functional"> Select current status</option>
+					<option value=""> Select current status</option>
 					<option value="functional"> Functional</option>
                     <option value="non-functional">Non-Functional</option>
                     
@@ -516,9 +499,17 @@ function fun2()//to hide all form elements
 
                   <div class="form-group row">
                   <div class="col-md-6">
-                  <label for="memory" class="register-container__label">Enter RAM:</label>
-                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
-                  </div>
+                  <label for="memory" class="register-container__label">Choose Scanning Mode:</label>
+				  <select class="form-control search-container__input" id="type" name="type" required>
+					<option value=""> Select scanning mode </option>
+					<option value="Flatbed"> Flatbed</option>
+                    <option value="ADF">ADF</option>
+                    
+
+
+                    </select>
+
+				</div>
                  
                   <div class="col-md-6">
                   <label for="memory" class="register-container__label">Enter ROM:</label>
@@ -565,6 +556,7 @@ function fun2()//to hide all form elements
                   </div>
 
 				  <div class="form-group row">
+
                   <div class="col-md-6">
                   <label for="memory" class="register-container__label">Enter Man Serial No.:</label>
                   <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
@@ -577,22 +569,84 @@ function fun2()//to hide all form elements
                   </div>
 
                   </div>
-
-
-                  <div class="form-group row">
+	  			  <div class="form-group row">
+					  
                   <div class="col-md-6">
-                  <label for="memory" class="register-container__label">Enter RAM:</label>
+                  <label for="memory" class="register-container__label">Enter Paper Tray Capacity:</label>
                   <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
                   </div>
                  
                   <div class="col-md-6">
-                  <label for="memory" class="register-container__label">Enter ROM:</label>
+                  <label for="memory" class="register-container__label">Enter Catridge Capacity:</label>
                   <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
 
                   </div>
 
                   </div>
-				  <div class="form-group col-md-8">
+				  <div class="form-group row">
+					  
+					  <div class="col-md-6">
+					  <label for="memory" class="register-container__label">Choose Printer Type:</label>
+					  <select >
+					<option value="">choose printer type</option>
+					<option value="laserjet">Laserjet</option>
+					<option value="inkjet">Inkjet</option>
+
+					  </select>
+					  </div>
+					 
+					  <div class="col-md-6">
+					  <label for="memory" class="register-container__label">Choose Ink type:</label>
+						<select>
+							<option value="">choose ink type</option>
+							<option value="monochrome">MonoChrome</option>
+							<option value="Color"> Color</option>
+
+						</select>	
+					  </div>
+	
+					  </div>
+
+                  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Choose Connectity capabilities:</label>
+				  <div class="multiselect">
+						<div class="selectBox" onclick="showCheckboxes()">
+						<select>
+							<option>Select an option</option>
+						</select>
+						<div class="overSelect"></div>
+						</div>
+						<div id="checkboxes">
+						<label for="one">
+							<input type="checkbox" id="one"  name="Standard USB Cable" /> Standard USB Cable</label>
+						<label for="two">
+							<input type="checkbox" id="two"  name="Bluetooth Capability" /> Bluetooth Capability</label>
+						<label for="three">
+							<input type="checkbox" id="three" name="Wi-Fi Capability" /> Wi-Fi Capability</label>
+							<label for="four">
+							<input type="checkbox" id="four" name="NFC (Near Field Communication) Printing" /> LAN Printing Capability</label>
+							<label for="five">
+							<input type="checkbox" id="five" name="NFC (Near Field Communication) Printing" /> NFC (Near Field Communication) Printing</label>
+							<label for="six">
+							<input type="checkbox" id="six" name="Cloud Printing Capability" /> Cloud Printing Capability</label>
+							
+						</div>
+					</div>                 
+				
+				</div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Printer Only/ All-in-One:</label>
+					<select >
+					<option value="">choose printer </option>
+					<option value="printer only">Printer Only</option>
+					<option value="all-in-one"> All-in-One</option>
+					</select>
+                  </div>
+
+                  </div>
+				  <div class="form-group col-md-6">
                     <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
                     <select class="form-control search-container__input" id="type" name="type" required>
 					<option value="functional"> Select current status</option>
@@ -619,12 +673,7 @@ function fun2()//to hide all form elements
                         </div>
 					</div>
 				</div>
-				<div class="col-xl-4 mb-30">
-					<div class="card-box height-100-p pd-20">
-						<h2 class="h4 mb-20">Lead Target</h2>
-						<div id="chart6"></div>
-					</div>
-				</div>
+			
 			</div>
 			<div class="card-box mb-30">
 				<h2 class="h4 pd-20">Best Selling Products</h2>
@@ -950,6 +999,21 @@ function fun2()//to hide all form elements
 	<script src="vendors/scripts/dashboard.js"></script>
     <script type="text/javascript">
 fun2();//to hide form elements after page has loaded completely
+</script>
+
+<script> 
+var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
 </script>
 </body>
 </html>

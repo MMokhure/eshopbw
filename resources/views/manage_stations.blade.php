@@ -227,7 +227,7 @@ function fun2()//to hide all form elements
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" data-toggle="modal" href="#adduser"><i class="dw dw-user"></i> Add User</a>
+										<a class="dropdown-item" data-toggle="modal" href="#addstation"><i class="dw dw-user"></i> Add User</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>

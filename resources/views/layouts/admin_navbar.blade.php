@@ -45,7 +45,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="calendar.html" class="dropdown-toggle no-arrow">
+						<a href="{{url('manage_stations')}}" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-apartment"></span><span class="mtext">STATIONS</span>
 						</a>
 					</li>

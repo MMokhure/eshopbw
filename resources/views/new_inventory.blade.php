@@ -948,7 +948,7 @@ function fun2()//to hide all form elements
 				  <div class="form-group col-md-8">
                     <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
                     <select class="form-control search-container__input" id="type" name="type" required>
-					<option value="functional"> Select current status</option>
+					<option value=""> Select current status</option>
 					<option value="functional"> Functional</option>
                     <option value="non-functional">Non-Functional</option>
                     

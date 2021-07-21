@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return view('manage_inventory');
     }
+
+    public function stations()
+    {
+        return view('manage_stations');
+    }
 }

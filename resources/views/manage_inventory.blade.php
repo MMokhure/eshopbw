@@ -24,6 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
 	<script>
@@ -181,15 +182,19 @@ function fun2()//to hide all form elements
 			</div>
 			<div class="card-box mb-30">
 				<h2 class="h4 pd-20">Inventory</h2>
+
+
 				<table class="data-table table nowrap">
 					<thead>
 						<tr>
-							<th class="table-plus datatable-nosort">Product</th>
+							<th class="table-plus datatable-nosort">G-Number</th>
 							
-							<th>Color</th>
-							<th>Size</th>
 							
-							<th>Oty</th>
+							<th>Cuurent User</th>
+							
+							<th>Office</th>
+							<th>Status</th>
+							<th>Current Station</th>
 							<th class="datatable-nosort">Action</th>
 						</tr>
 					</thead>
@@ -204,13 +209,14 @@ function fun2()//to hide all form elements
 							<td>M</td>
 							
 							<td>1</td>
+							<td>Maun</td>
 							<td>
 								<div class="dropdown">
 									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-user"></i> Add User</a>
+										<a class="dropdown-item" data-toggle="modal" href="#adduser"><i class="dw dw-user"></i> Add User</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -227,13 +233,14 @@ function fun2()//to hide all form elements
 							<td>9UK</td>
 						
 							<td>1</td>
+							<td>Maun</td>
 							<td>
 								<div class="dropdown">
 									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-user"></i> Add User</a>
+										<a class="dropdown-item" data-toggle="modal" href="#adduser"><i class="dw dw-user"></i> Add User</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -250,13 +257,14 @@ function fun2()//to hide all form elements
 							<td>M</td>
 							
 							<td>4</td>
+							<td>Maun</td>
 							<td>
 								<div class="dropdown">
 									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-user"></i> Add User</a>
+										<a class="dropdown-item" data-toggle="modal" href="#adduser"><i class="dw dw-user"></i> Add User</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -273,13 +281,14 @@ function fun2()//to hide all form elements
 							<td>L</td>
 							
 							<td>1</td>
+							<td>Maun</td>
 							<td>
 								<div class="dropdown">
 									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-user"></i> Add User</a>
+										<a class="dropdown-item"data-toggle="modal" href="#adduser"><i class="dw dw-user"></i> Add User</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -296,14 +305,15 @@ function fun2()//to hide all form elements
 							<td>M</td>
 							
 							<td>1</td>
+							<td>Maun</td>
 							<td>
 								<div class="dropdown">
 									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-user"></i> Add User</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+										<a class="dropdown-item" data-toggle="modal" href="#adduser"><i class="dw dw-user"></i> Add User</a>
+										<a class="dropdown-item" data-toggle="modal" href="#edit"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
 								</div>
@@ -313,6 +323,169 @@ function fun2()//to hide all form elements
 				</table>
 			</div>
 			<br/>
+		
+		
+  <!-- Modal -->
+  <div class="modal fade" id="adduser" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Add Inventory Details</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  
+        </div>
+        <div class="modal-body">
+		<form action="" method="POST"> 
+		
+		<div class="form-group col-md-12">
+                  
+                  <label for="fullname" class="register-container__label">Enter FullName:</label>
+                  <input name="fullname" type="text" class="form-control register-container__input" id="fullname" required>
+                  </div>
+
+                  <div class="form-group row">
+                   
+				  <div class="form-group col-md-6">
+                    <label for="type" class="search-container__label">SELECT CURRENT STATION</label>
+                    <select class="form-control search-container__input" id="type" name="type" required>
+					<option value=""> Select current station</option>
+					<option value="Lobatse"> Lobatse</option>
+                    <option value="Maun">Maun</option>
+					<option value="GHC">Gaborone High Court</option>
+					<option value="GCA">Gaborone Court Of Appeal</option>
+					<option value="broadhurst">Broadhurst</option>
+					<option value="Takatokwane">Takatokwane</option>
+					<option value="Francistown">Francistown</option>
+
+                    </select>
+                  </div>
+
+
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Office No.:</label>
+                  <input name="office" type="text" class="form-control register-container__input" id="office" required>
+
+                  </div>
+
+                  </div>
+
+				  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="tel" class="register-container__label">Enter Office Tel.:</label>
+                  <input name="tel" type="text" class="form-control register-container__input" id="tel" required>
+                  </div>
+				  </div>
+
+				</form>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-primary">Add User</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+					  
+     	
+  <!-- Modal -->
+  <div class=" modal fade" id="edit" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Edit Inventory Details</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  
+        </div>
+        <div class="modal-body">
+				
+		<form action="" method="POST"> 
+				<div class="form-group col-md-12">
+                  
+                  <label for="fullname" class="register-container__label">Enter FullName:</label>
+                  <input name="fullname" type="text" class="form-control register-container__input" id="fullname" value ="" required>
+                  </div>
+
+                  <div class="form-group row">
+				  <div class="form-group col-md-6">
+                    <label for="type" class="search-container__label">SELECT CURRENT STATION</label>
+                    <select class="form-control search-container__input" id="type" name="type" required>
+					<option value=""> Select current station</option>
+					<option value="Lobatse"> Lobatse</option>
+                    <option value="Maun">Maun</option>
+					<option value="GHC">Gaborone High Court</option>
+					<option value="GCA">Gaborone Court Of Appeal</option>
+					<option value="broadhurst">Broadhurst</option>
+					<option value="Takatokwane">Takatokwane</option>
+					<option value="Francistown">Francistown</option>
+
+                    </select>
+                  </div>
+
+
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Office No.:</label>
+                  <input name="office" type="text" class="form-control register-container__input" id="office" value ="" required>
+
+                  </div>
+
+                  </div>
+
+				  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="tel" class="register-container__label">Enter Office Tel.:</label>
+                  <input name="tel" type="text" class="form-control register-container__input" id="tel" value ="" required>
+                  </div>
+				  </div>
+
+				  
+                  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter RAM:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram"  value =""  required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter ROM:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" value =""  required>
+
+                  </div>
+
+                  </div>
+
+				  <div class="form-group col-md-8">
+                    <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
+                    <select class="form-control search-container__input" id="type" name="type" required>
+					<option value=""> Select current status</option>
+					<option value="functional"> Functional</option>
+                    <option value="non-functional">Non-Functional</option>
+                    
+
+
+                    </select>
+                  </div>
+
+
+				</form>    
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>           
+				
+			
 
 @include('layouts.footer')
 

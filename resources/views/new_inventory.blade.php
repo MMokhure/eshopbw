@@ -1001,45 +1001,46 @@ function fun2()//to hide all form elements
                   </div>
 
 
-                  <div class="form-group row">
+         <div class="form-group row">
                   <div class="col-md-6">
-                  <label for="mode" class="register-container__label">Enter Paper Tray Capacity:</label>
-				  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+                  <label for="Tray" class="register-container__label">Enter Paper Tray Capacity:</label>
+				  <input name="Tray" type="text" class="form-control register-container__input" id="Tray" required>
+				</div>
+                 
+
+
+				<div class="col-md-6">
+                  <label for="Cartridge" class="register-container__label">Enter Cartridge Capacity:</label>
+				  <input name="Cartridge" type="text" class="form-control register-container__input" id="Cartridge" required>
+				</div>
+                 
+                 
+			 </div>
+
+
+				  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="printer_type" class="register-container__label">Printer Type:</label>
+				  <select class="form-control search-container__input" id="printer_type" name="printer_type" required>
+					<option > Select Printer Type </option>
+					<option value="Inkjet">  Inkjet Printer</option>
+                    <option value="Laserjet">LaserJet Printer</option>
+                  </select>
+
 				</div>
                  
                   <div class="col-md-6">
-                  <label for="memory" class="register-container__label">Select Function:</label>
-				  <div class="multipleSelection">
-            <div class="selectBox" 
-                onclick="showCheckboxes()">
-                <select>
-                    <option>Select options</option>
-                </select>
-                <div class="overSelect"></div>
-            </div>
-  
-            <div id="checkBoxes">
-                <label for="first">
-                    <input type="checkbox" id="first" />
-                    checkBox1
-                </label>
-                  
-                <label for="second">
-                    <input type="checkbox" id="second" />
-                    checkBox2
-                </label>
-                <label for="third">
-                    <input type="checkbox" id="third" />
-                    checkBox3
-                </label>
-                <label for="fourth">
-                    <input type="checkbox" id="fourth" />
-                    checkBox4
-                </label>
-            </div>
-        </div>
+				  <label for="mode" class="register-container__label">Ink Type:</label>
+				  <select class="form-control search-container__input" id="type" name="type" required>
+					<option value=""> Select Ink Type </option>
+					<option value="Monochrome"> Monochrome</option>
+                    <option value="Color"> Color</option>
+                  </select>
                   </div>
-				  <div class="form-group row">
+
+              </div>  
+
+			  <div class="form-group row">
                   <div class="col-md-6">
                   <label for="mode" class="register-container__label">Printer Only/All-in-one:</label>
 				  <select class="form-control search-container__input" id="type" name="type" required>
@@ -1051,13 +1052,61 @@ function fun2()//to hide all form elements
 				</div>
                  
                   <div class="col-md-6">
-                  <label for="memory" class="register-container__label">Enter ROM:</label>
-                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Select Connection Interface:</label>
+								<div class="multipleSelection">
+										<div class="selectBox" 
+											onclick="showCheckboxes()">
+											<select>
+												<option>Select options</option>
+											</select>
+											<div class="overSelect"></div>
+										</div>
+						
+									<div id="checkBoxes">
+										<label for="first">
+											<input type="checkbox" id="first" />
+											LAN network Capability
+										</label>
+										
+										<label for="second">
+											<input type="checkbox" id="second" />
+											Standard USB Cable
+										</label>
+										<label for="third">
+											<input type="checkbox" id="third" />
+											Wi-Fi Capability
 
+										</label>
+										<label for="fourth">
+											<input type="checkbox" id="fourth" />
+											Bluetooth Capability
+											
+										</label>
+										
+										<label for="fifth">
+											<input type="checkbox" id="fifth" />
+											NFC (Near Field Communication) Printing 
+										</label>
+
+										<label for="sixth">
+											<input type="checkbox" id="sixth" />
+											Cloud Printing Capability
+										</label>
+									</div>
+								</div>
+                  </div>
                   </div>
 
-                  </div>
-				  <div class="form-group col-md-8">
+              </div> 
+
+				  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="OS" class="search-container__label">SELECT CURRENT OPERATING SYSTEM</label>
+                  <input name="operating_system" type="text" class="form-control register-container__input" id="operating_system" required>
+
+                  </div> 
+                  <div class="col-md-6">
                     <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
                     <select class="form-control search-container__input" id="type" name="type" required>
 					<option value=""> Select current status</option>
@@ -1068,7 +1117,7 @@ function fun2()//to hide all form elements
 
                     </select>
                   </div>
-                 
+                 </div>
 				 
 
           <div class="mb-3">
@@ -1076,7 +1125,6 @@ function fun2()//to hide all form elements
             <textarea name="specs" class="form-control" id="specs"></textarea>
           </div>
 		  <button type="button" name="submit" class="btn btn-primary">Add Inventory</button>
-       	  
 		
 
 </form>

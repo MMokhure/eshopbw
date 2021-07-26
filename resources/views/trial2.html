@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Show Hide Elements Using Select Box</title>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <style>
+      .box {
+  color: #fff;
+  padding: 20px;
+  display: none;
+  margin-top: 20px;
+}
+
+.computer {
+  background: #ffffff;
+}
+
+.laptop {
+  background: #ffffff;
+}
+
+.blue {
+  background: #0000ff;
+}
+  </style>
+</head>
+
+<body>
+  <div>
+    <select>
+      <option>Choose Inventory</option>
+      <option value="computer">computer</option>
+      <option value="laptop">Laptop</option>
+                    <option value="Printer">Printer</option>
+                    <option value="Server">Server</option>
+                    <option value="Scanner">Scanner</option>
+    </select>
+  </div>
+
+  <center>
+  <div id="check" class="computer box">
+
+   
+    <form id="signupform" class="form-horizontal" role="form">
+     
+    <div class="form-group">
+        <label for="email" class="col-md-3 control-label">Email</label>
+        <div class="col-md-9">
+            <input type="text" class="form-control" name="email" placeholder="Email Address">
+        </div>
+    </div>
+        
+    <div class="form-group">
+        <label for="firstname" class="col-md-3 control-label">First Name</label>
+        <div class="col-md-9">
+            <input type="text" class="form-control" name="firstname" placeholder="First Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastname" class="col-md-3 control-label">Last Name</label>
+        <div class="col-md-9">
+            <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password" class="col-md-3 control-label">Password</label>
+        <div class="col-md-9">
+            <input type="password" class="form-control" name="passwd" placeholder="Password">
+        </div>
+    </div>
+        
+    <div class="form-group">
+        <label for="icode" class="col-md-3 control-label">Invitation Code</label>
+        <div class="col-md-9">
+            <input type="text" class="form-control" name="icode" placeholder="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <!-- Button -->                                        
+        <div class="col-md-offset-3 col-md-9">
+            <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+            <span style="margin-left:8px;">or</span>  
+        </div>
+
+    
+    
+</form>
+
+</div>
+
+</center>
+  <div id="check" class="laptop box">
+
+    <form id="signupform" class="form-horizontal" role="form">
+                                
+        <div class="panel-title">Laptop</div>
+
+        <div class="form-group">
+            <label for="email" class="col-md-3 control-label">Email</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="email" placeholder="Email Address">
+            </div>
+        </div>
+            
+        <div class="form-group">
+            <label for="firstname" class="col-md-3 control-label">First Name</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="firstname" placeholder="First Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastname" class="col-md-3 control-label">Last Name</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+            </div>
+        </div>
+       
+    </form>
+    
+  </div>
+  <div id="check" class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+</body>
+
+<script>
+$(document).ready(function() {
+  $("select").change(function() {
+    $(this).find("option:selected").each(function() {
+      var optionValue = $(this).attr("value");
+      if (optionValue) {
+        $(".box").not("." + optionValue).hide();
+        $("." + optionValue).show();
+      } else {
+        $(".box").hide();
+      }
+    });
+  }).change();
+});
+
+</script>
+</html>

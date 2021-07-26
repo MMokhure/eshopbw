@@ -1,0 +1,20 @@
+<div class="form-group{{ $errors->has('summary') ? ' has-error' : '' }}">
+                    <label for="summary" class="col-md-4 control-label">Research Type</label>
+                    <div class="col-md-6">
+                        {{ Form::select('researchType', [
+                        'Thesis' => 'Thesis', 'Project' => 'Thesis-Equivalent Project', 'Research Assistantship' => 'Research Assistantship', 'Others' => 'Others (State if a combination of above)',],null,
+                         array('placeholder' => 'Select one', 'id' => 'researchType','class'=>'form-control')) }}
+                    </div>
+                </div>
+
+                <div class="form-group{{ $errors->has('others') ? ' has-error' : '' }}" style="display: none">
+                    <label for="others" class="col-md-4 control-label">If Others, Please specify</label>
+                    <div class="col-md-6">
+                        <input id="others" type="text" class="form-control" name="others" value="{{ old('others') }}">
+                        @if ($errors->has('others'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('others') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>

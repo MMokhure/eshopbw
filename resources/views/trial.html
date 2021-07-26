@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Example of HTML onchange attribute with form elements</title>
+</head>
+<body>
+<form name="onchange_example" action=""> 
+Name : <input type="text" name="name" onchange="alert('value of name field is changed')"><br>
+<label>Favorite Sports </label> 
+<select name="favourite_sports" onchange="alert('value of favourite_sports is changed')">
+<option value="Soccer">Soccer</option>
+<option value="Hockey">Hockey</option>
+<option value="Tennis">Tennis</option> 
+<option value="Golf">Golf</option> 
+</select><br>
+<label>Describe yourself in short : </label>   <br/><textarea cols="10" rows="10" name="describe_ yourself" onchange="alert('value of describe_ yourself is changed')">   </textarea><br>
+<button type="button" name="submit">Submit</button>
+</form>
+</body>
+</html>

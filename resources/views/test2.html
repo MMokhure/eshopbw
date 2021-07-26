@@ -1,0 +1,11 @@
+<?php echo form_open(); ?>
+    <select>
+        <?php foreach($status_list as $status): ?>
+        <option value="<?php echo $status->id; ?>"><?php echo $status->name; ?></option>
+        <?php endforeach; ?>
+    </select>
+    <!-- Show this only if status type is, let's say "E" -->
+    <input type="text" id="E_happened" name="E_happened">
+    <!-- Show this only if status type is, let's say "S" -->
+    <input type="text" id="S_happened" name="S_happened">
+<?php echo form_close(); ?>  

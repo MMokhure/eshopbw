@@ -4,11 +4,51 @@
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
 	<title>AOJ INVENTORY</title>
-
+	
+    <style>
+        h1 {
+            color: green;
+        }
+  
+        .multipleSelection {
+            width: 450px;
+            background-color: #BCC2C1;
+        }
+  
+        .selectBox {
+            position: relative;
+        }
+  
+        .selectBox select {
+            width: 100%;
+            font-weight: bold;
+        }
+  
+        .overSelect {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+  
+        #checkBoxes {
+            display: none;
+            border: 1px #8DF5E4 solid;
+        }
+  
+        #checkBoxes label {
+            display: block;
+        }
+  
+       
+    </style>
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png">
+	<link href="styles/multiselect.css" rel="stylesheet"/>
+
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -374,7 +414,7 @@ function fun2()//to hide all form elements
 
 <!------------------------------------------1---Computer Sever------------------------------------------------------------------------>
 <form  method="post"  name="firstform" id="form1" action="" method="POST">
-<label>Add Computer(Desktop)</label><br>
+<label><h4>Add Computer(Desktop)</h4></label><br>
 
 				  <div class="form-group col-md-12">
                   
@@ -444,7 +484,7 @@ function fun2()//to hide all form elements
 <!-------------------------2--------laptop form------------------------------------------------------->
 
 <form name="secondform" id="form2" action="" method="POST">
-<label>Add Laptop</label><br>
+<label><h4>Add Laptop</h4></label><br>
 
 
 
@@ -516,7 +556,7 @@ function fun2()//to hide all form elements
 <!--------------------------3------Scanner form------------------------------------------------------->
 
 <form name="thirdform" id="form3" action="" method="POST"> 
-<label>Add Scanner</label><br>
+<label><h4>Add Scanner</h4></label><br>
 
 
 
@@ -592,7 +632,7 @@ function fun2()//to hide all form elements
 <!------------------------------4---Switch form------------------------------------------------------->
 
 <form name="fifthform" id="form5" action="" method="POST"> 
-<label>Add Switch</label><br>
+<label><h4>Add Switch</h4></label><br>
 
 
 
@@ -660,7 +700,7 @@ function fun2()//to hide all form elements
 <!---------------------------6------Monitor form------------------------------------------------------->
 
 <form name="sixthform" id="form6" action="" method="POST">
-<label>Add Monitor</label><br>
+<label><h4>Add Monitor</h4></label><br>
 
 
 
@@ -725,7 +765,7 @@ function fun2()//to hide all form elements
 <!--------------------------7-------Tablet form------------------------------------------------------->
 
 <form name="seventhform" id="form7" action="" method="POST">
-<label>Add Tablet</label><br>
+<label><h4>Add Tablet</h4></label><br>
 
 
 
@@ -794,7 +834,7 @@ function fun2()//to hide all form elements
 <!-----------------------------8----Router form------------------------------------------------------->
 
 <form name="Eighthform" id="form8" action="" method="POST">
-<label>Add Router</label><br>
+<label><h4>Add Router</h4></label><br>
 
 
 
@@ -863,7 +903,7 @@ function fun2()//to hide all form elements
 <!-----------------------9---------Server form------------------------------------------------------->
 
 <form name="ninethform" id="form9" action="" method="POST">
-<label>Add Server</label><br>
+<label><h4>Add Server</h4></label><br>
 
 				  <div class="form-group col-md-12">
                   
@@ -929,6 +969,118 @@ function fun2()//to hide all form elements
 </form>
 <!------------------9-----end Server form----------------------------------->
 
+
+
+
+
+<!--------------------------3------Printer form------------------------------------------------------->
+
+<form name="forthform" id="form4" action="" method="POST"> 
+<label><h4>Add Printer</h4></label><br>
+
+
+
+				  <div class="form-group col-md-12">
+                  
+                  <label for="memory" class="register-container__label">Enter Model/Make:</label>
+                  <input name="model" type="text" class="form-control register-container__input" id="model" required>
+                  </div>
+
+				  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Man Serial No.:</label>
+                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  </div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter Govt Serial No.:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+
+
+                  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="mode" class="register-container__label">Enter Paper Tray Capacity:</label>
+				  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+				</div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Select Function:</label>
+				  <div class="multipleSelection">
+            <div class="selectBox" 
+                onclick="showCheckboxes()">
+                <select>
+                    <option>Select options</option>
+                </select>
+                <div class="overSelect"></div>
+            </div>
+  
+            <div id="checkBoxes">
+                <label for="first">
+                    <input type="checkbox" id="first" />
+                    checkBox1
+                </label>
+                  
+                <label for="second">
+                    <input type="checkbox" id="second" />
+                    checkBox2
+                </label>
+                <label for="third">
+                    <input type="checkbox" id="third" />
+                    checkBox3
+                </label>
+                <label for="fourth">
+                    <input type="checkbox" id="fourth" />
+                    checkBox4
+                </label>
+            </div>
+        </div>
+                  </div>
+				  <div class="form-group row">
+                  <div class="col-md-6">
+                  <label for="mode" class="register-container__label">Printer Only/All-in-one:</label>
+				  <select class="form-control search-container__input" id="type" name="type" required>
+					<option value=""> Select Printer Only/All-in-one </option>
+					<option value="printer only"> Printer Only</option>
+                    <option value="all-in-one">All-in-one</option>
+                  </select>
+
+				</div>
+                 
+                  <div class="col-md-6">
+                  <label for="memory" class="register-container__label">Enter ROM:</label>
+                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+
+                  </div>
+
+                  </div>
+				  <div class="form-group col-md-8">
+                    <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
+                    <select class="form-control search-container__input" id="type" name="type" required>
+					<option value=""> Select current status</option>
+					<option value="functional"> Functional</option>
+                    <option value="non-functional">Non-Functional</option>
+                    
+
+
+                    </select>
+                  </div>
+                 
+				 
+
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Other Specs:</label>
+            <textarea name="specs" class="form-control" id="specs"></textarea>
+          </div>
+		  <button type="button" name="submit" class="btn btn-primary">Add Inventory</button>
+       	  
+		
+
+</form>
+<!---------------------------------------------------------------3-----end Printer form-------------------------------------------------------------------->
 
 
 
@@ -1095,6 +1247,7 @@ function fun2()//to hide all form elements
 		</div>
 	</div>
 	<!-- js -->
+	<script src="vendors/scripts/multiselect.min.js"></script>
 
 	<script src="vendors/scripts/core.js"></script>
 	<script src="vendors/scripts/script.min.js"></script>
@@ -1111,18 +1264,24 @@ fun2();//to hide form elements after page has loaded completely
 </script>
 
 <script> 
-var expanded = false;
 
-function showCheckboxes() {
-  var checkboxes = document.getElementById("checkboxes");
-  if (!expanded) {
-    checkboxes.style.display = "block";
-    expanded = true;
-  } else {
-    checkboxes.style.display = "none";
-    expanded = false;
-  }
-}
-</script>
+        var show = true;
+  
+        function showCheckboxes() {
+            var checkboxes = 
+                document.getElementById("checkBoxes");
+
+				
+  
+            if (show) {
+                checkboxes.style.display = "block";
+                show = false;
+            } else {
+                checkboxes.style.display = "none";
+                show = true;
+            }
+        }
+    </script>
+
 </body>
 </html>

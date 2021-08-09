@@ -3,7 +3,7 @@
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>AOJ MANAGE STATIONS</title>
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -34,7 +34,7 @@
 <body>
 <!-------------pre loader-------------->
 
-@include('layouts.pre-loader')
+
 	<div class="header">
 		<div class="header-left">
 			<div class="menu-icon dw dw-menu"></div>
@@ -76,13 +76,30 @@
 				</form>
 			</div>
 		</div>
-		@include('layouts.notifications_bar')
-	@include('layouts.profile_bar')
 		
+			<div class="user-info-dropdown">
+				<div class="dropdown">
+					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+						<span class="user-icon">
+							<img src="vendors/images/photo1.jpg" alt="">
+						</span>
+						<span class="user-name">Ross C. Lopez</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+						<a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
+						<a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
+						<a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
+						<a class="dropdown-item" href="login.html"><i class="dw dw-logout"></i> Log Out</a>
+					</div>
+				</div>
+			</div>
+			
 		</div>
 	
 
-	
+	@include('layouts.notifications_bar')
+	@include('layouts.profile_bar')
+		
 		</div>
 	</div>
 
@@ -91,13 +108,29 @@
 
 	<div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10">
-		
+			<div class="col-md-2">
+				<form name="stationForm">
+				<select class="form-control search-container__input"  name="station"  id="station" >
+						<option value=""> Select current station</option>
+						<option value="Lobatse"> Lobatse</option>
+						<option value="Maun">Maun</option>
+						<option value="GHC">Gaborone High Court</option>
+						<option value="GCA">Gaborone Court Of Appeal</option>
+						<option value="broadhurst">Broadhurst</option>
+						<option value="Takatokwane">Takatokwane</option>
+						<option value="Francistown">Francistown</option>
+				</select>
+			</form>
+						</div>
+						<!-------------------------------STATIONS-------------------------------->
 						<br/>
 						<center>
 								<div id="v2">
 
-									<h2>	Number of Available Stations: 20</h2>
-								
+									<h2>	Number of Inventory in:	</h2>
+								<h3></h3>
+						   
+						   </div>
 								</center>
 								<br/>
 
@@ -105,10 +138,12 @@
 				<div class="col-xl-3 mb-30">
 					<div class="card-box height-100-p widget-style1">
 						<div class="d-flex flex-wrap align-items-center">
-							
+							<div class="progress-data">
+								<div id="chart"></div>
+							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">Broadhurst Magistrate Court</div>
-								<div class="weight-600 font-14">Gaborone, Broadhurst </div>
+								<div class="h4 mb-0">Computers (Desktops)</div>
+								<div class="weight-600 font-14">200</div>
 							</div>
 						</div>
 					</div>
@@ -116,10 +151,12 @@
 				<div class="col-xl-3 mb-30">
 					<div class="card-box height-100-p widget-style1">
 						<div class="d-flex flex-wrap align-items-center">
-							
+							<div class="progress-data">
+								<div id="chart2"></div>
+							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">Francistown High Court</div>
-								<div class="weight-600 font-14">Francistown</div>
+								<div class="h4 mb-0">Laptops</div>
+								<div class="weight-600 font-14">200</div>
 							</div>
 						</div>
 					</div>
@@ -127,10 +164,12 @@
 				<div class="col-xl-3 mb-30">
 					<div class="card-box height-100-p widget-style1">
 						<div class="d-flex flex-wrap align-items-center">
-							
+							<div class="progress-data">
+								<div id="chart3"></div>
+							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">Gaborone Court Of Appeal</div>
-								<div class="weight-600 font-14">Gaborone, CBD</div>
+								<div class="h4 mb-0">Printers</div>
+								<div class="weight-600 font-14">200</div>
 							</div>
 						</div>
 					</div>
@@ -138,10 +177,12 @@
 				<div class="col-xl-3 mb-30">
 					<div class="card-box height-100-p widget-style1">
 						<div class="d-flex flex-wrap align-items-center">
-							
+							<div class="progress-data">
+								<div id="chart4"></div>
+							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">Gaborone High Court</div>
-								<div class="weight-600 font-14">Gaborone, CBD</div>
+								<div class="h4 mb-0">Scanners</div>
+								<div class="weight-600 font-14">200</div>
 							</div>
 						</div>
 					</div>
@@ -153,10 +194,12 @@
 	<div class="col-xl-3 mb-30">
 		<div class="card-box height-100-p widget-style1">
 			<div class="d-flex flex-wrap align-items-center">
-				
+				<div class="progress-data">
+					<div id="chart"></div>
+				</div>
 				<div class="widget-data">
-					<div class="h4 mb-0">Extension II Magistrate Court</div>
-					<div class="weight-600 font-14">Gaborone, Extension II</div>
+					<div class="h4 mb-0">Monitors</div>
+					<div class="weight-600 font-14">200</div>
 				</div>
 			</div>
 		</div>
@@ -164,11 +207,12 @@
 	<div class="col-xl-3 mb-30">
 		<div class="card-box height-100-p widget-style1">
 			<div class="d-flex flex-wrap align-items-center">
-				
-				
+				<div class="progress-data">
+					<div id="chart2"></div>
+				</div>
 				<div class="widget-data">
-					<div class="h4 mb-0"> Village Magistrate Court</div>
-					<div class="weight-600 font-14">Gaborone, Village</div>
+					<div class="h4 mb-0">Tablets</div>
+					<div class="weight-600 font-14">200</div>
 				</div>
 			</div>
 		</div>
@@ -176,10 +220,12 @@
 	<div class="col-xl-3 mb-30">
 		<div class="card-box height-100-p widget-style1">
 			<div class="d-flex flex-wrap align-items-center">
-			
+				<div class="progress-data">
+					<div id="chart3"></div>
+				</div>
 				<div class="widget-data">
-					<div class="h4 mb-0">Lobatse High Court</div>
-					<div class="weight-600 font-14">Lobatse</div>
+					<div class="h4 mb-0">Routers</div>
+					<div class="weight-600 font-14">200</div>
 				</div>
 			</div>
 		</div>
@@ -187,10 +233,12 @@
 	<div class="col-xl-3 mb-30">
 		<div class="card-box height-100-p widget-style1">
 			<div class="d-flex flex-wrap align-items-center">
-				
+				<div class="progress-data">
+					<div id="chart4"></div>
+				</div>
 				<div class="widget-data">
-					<div class="h4 mb-0">Maun High Court</div>
-					<div class="weight-600 font-14">Maun</div>
+					<div class="h4 mb-0">Servers</div>
+					<div class="weight-600 font-14">200</div>
 				</div>
 			</div>
 		</div>
@@ -232,15 +280,8 @@
 								<td>GABORONE, Broadhurst</td>
 								<td>20</td>
 								<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>
+									<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
 								</td>
 								
 							</tr>
@@ -250,16 +291,10 @@
 								<td>MAUN</td>
 								<td>10</td>
 								<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									
-										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>	</td>
+								
+									<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+								</td>
 							
 							</tr>
 							<tr>
@@ -268,16 +303,9 @@
 								<td>TAKATOKWANE</td>
 								<td>17</td>
 								<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										
-										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>	</td>
+									<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+								</td>
 								
 							</tr>
 						</tbody>
@@ -333,7 +361,6 @@
 			
 			</div>
 	</div>
-	@include('layouts.footer');
 	<!-- js -->
 	<script src="vendors/scripts/core.js"></script>
 	<script src="vendors/scripts/script.min.js"></script>

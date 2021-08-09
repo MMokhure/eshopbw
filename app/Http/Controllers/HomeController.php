@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('manage_stations');
     }
+
+    public function classification()
+    {
+        return view('inventory_classification');
+    }
 }

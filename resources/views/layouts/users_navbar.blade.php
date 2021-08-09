@@ -22,18 +22,7 @@
 							</a>
 						</li>
 					
-					<li class="dropdown">
-						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon dw dw-user1"></span><span class="mtext">USERS</span>
-						</a>
-						<ul class="submenu">
-						
-							<li><a href="form-basic.html">Manage Users</a></li>
-							<li><a href="advanced-components.html">Add New User</a></li>
-							
-						</ul>
-					</li>
-
+				
             
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
@@ -41,7 +30,6 @@
 						</a>
 						<ul class="submenu">
 							<li><a  href="{{url('manage_inventory')}}">Manage Inventory</a></li>
-							<li><a href="{{url('inventory_classification')}}" > Inventory Classification</a></li>
 							<li><a href="{{url('new_inventory')}}" >Add New Inventory</a></li>
 						</ul>
 					</li>
@@ -65,3 +53,4 @@
 			</div>
 		</div>
 	</div>
+	

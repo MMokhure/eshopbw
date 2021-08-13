@@ -28,6 +28,7 @@ Route::get('new_inventory',[HomeController::class, 'addinventory'])->name('new_i
 Route::post('desktops',[PostController::class, 'store']);
 Route::post('laptops',[PostController::class, 'storeLaptop']);
 Route::post('scanners',[PostController::class, 'addScanner']);
+Route::post('printers',[PostController::class, 'addPrinter']);
 
 
 Route::get('manage_inventory',[HomeController::class, 'inventory'])->name('manage_inventory.inventory');

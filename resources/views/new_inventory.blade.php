@@ -964,7 +964,8 @@ function fun2()//to hide all form elements
 
 <!--------------------------3------Printer form------------------------------------------------------->
 
-<form name="forthform" id="form4" action="" method="POST"> 
+<form name="forthform" id="form4" action="printers" method="POST"> 
+	@csrf
 <label><h4>Add Printer</h4></label><br>
 
 
@@ -978,12 +979,12 @@ function fun2()//to hide all form elements
 				  <div class="form-group row">
                   <div class="col-md-6">
                   <label for="memory" class="register-container__label">Enter Man Serial No.:</label>
-                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  <input name="mserial" type="text" class="form-control register-container__input" id="ram" required>
                   </div>
                  
                   <div class="col-md-6">
                   <label for="memory" class="register-container__label">Enter Govt Serial No.:</label>
-                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+                  <input name="gserial" type="text" class="form-control register-container__input" id="rom" required>
 
                   </div>
 
@@ -993,14 +994,14 @@ function fun2()//to hide all form elements
          <div class="form-group row">
                   <div class="col-md-6">
                   <label for="Tray" class="register-container__label">Enter Paper Tray Capacity:</label>
-				  <input name="Tray" type="text" class="form-control register-container__input" id="Tray" required>
+				  <input name="tray" type="text" class="form-control register-container__input" id="Tray" required>
 				</div>
                  
 
 
 				<div class="col-md-6">
                   <label for="Cartridge" class="register-container__label">Enter Cartridge Capacity:</label>
-				  <input name="Cartridge" type="text" class="form-control register-container__input" id="Cartridge" required>
+				  <input name="cartridge" type="text" class="form-control register-container__input" id="Cartridge" required>
 				</div>
                  
                  
@@ -1020,7 +1021,7 @@ function fun2()//to hide all form elements
                  
                   <div class="col-md-6">
 				  <label for="mode" class="register-container__label">Ink Type:</label>
-				  <select class="form-control search-container__input" id="type" name="type" required>
+				  <select class="form-control search-container__input" id="type" name="inktype" required>
 					<option value=""> Select Ink Type </option>
 					<option value="Monochrome"> Monochrome</option>
                     <option value="Color"> Color</option>
@@ -1042,7 +1043,7 @@ function fun2()//to hide all form elements
                  
                   <div class="col-md-6">
                   <div class="col-md-6">
-                  <label for="memory" class="register-container__label">Select Connection Interface:</label>
+                  <label for="memory" class="register-container__label" name="opt">Select Connection Interface:</label>
 								<div class="multipleSelection">
 										<div class="selectBox" 
 											onclick="showCheckboxes()">
@@ -1092,12 +1093,12 @@ function fun2()//to hide all form elements
 				  <div class="form-group row">
                   <div class="col-md-6 mb-3">
                   <<label for="message-text" class="col-form-label">Other Specs:</label>
-            <textarea name="specs" class="form-control" id="specs"></textarea>
+            <textarea name="others" class="form-control" id="specs"></textarea>
                   </div> 
                   <div class="col-md-6">
 					  
                     <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
-                    <select class="form-control search-container__input" id="type" name="type" required>
+                    <select class="form-control search-container__input" id="type" name="status" required>
 					<option value=""> Select current status</option>
 					<option value="functional"> Functional</option>
                     <option value="non-functional">Non-Functional</option>
@@ -1110,7 +1111,7 @@ function fun2()//to hide all form elements
 				 
 
           <
-		  <button type="button" name="submit" class="btn btn-primary">Add Inventory</button>
+		  <button type="submit" name="submit" class="btn btn-primary">Add Inventory</button>
 		
 
 </form>

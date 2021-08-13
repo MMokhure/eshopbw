@@ -72,6 +72,27 @@ public function addScanner(Request $request){
 }
 
 
+public function addPrinter(Request $request){   
+    $querry = DB::table('printers')->insert([
+        'model' => $request->input('model'),
+        'mserial'=> $request->input('mserial'),
+        'gserial' => $request->input('gserial'),
+        'type'=> $request->input('tray'),
+        'status'=> $request->input('cartridge'),
+        'others'=> $request->input('printer_type'),
+        'type'=> $request->input('inktype'),
+        'type'=> $request->input('opt'),
+        'type'=> $request->input('others'),
+        'type'=> $request->input('status')
+    ]);
+
+    if($querry){
+        return back()->with('success', 'Data have been successfuly inserted');
+    }else{
+        return back()->with('fail', 'Something went went');
+    }
+}
+
 
     public function show(){
         return view('desktops.show',compact('desktop'));

@@ -15,7 +15,7 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('home',[HomeController::class, 'index'])->name('home.index');
@@ -27,6 +27,7 @@ Route::get('new_inventory',[HomeController::class, 'addinventory'])->name('new_i
 //Crud route
 Route::post('desktops',[PostController::class, 'store']);
 Route::post('laptops',[PostController::class, 'storeLaptop']);
+Route::post('scanners',[PostController::class, 'addScanner']);
 
 
 Route::get('manage_inventory',[HomeController::class, 'inventory'])->name('manage_inventory.inventory');

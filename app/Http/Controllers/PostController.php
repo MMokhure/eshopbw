@@ -54,6 +54,25 @@ public function storeLaptop(Request $request){
     }
 }
 
+public function addScanner(Request $request){   
+    $querry = DB::table('scanners')->insert([
+        'model' => $request->input('model'),
+        'mserial'=> $request->input('mserial'),
+        'gserial' => $request->input('gserial'),
+        'type'=> $request->input('type'),
+        'status'=> $request->input('status'),
+        'others'=> $request->input('others')
+    ]);
+
+    if($querry){
+        return back()->with('success', 'Data have been successfuly inserted');
+    }else{
+        return back()->with('fail', 'Something went went');
+    }
+}
+
+
+
     public function show(){
         return view('desktops.show',compact('desktop'));
     }

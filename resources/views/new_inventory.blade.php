@@ -11,7 +11,7 @@
         }
   
         .multipleSelection {
-            width: 450px;
+            width: 250px;
             background-color: #BCC2C1;
         }
   
@@ -551,7 +551,8 @@ function fun2()//to hide all form elements
 
 <!--------------------------3------Scanner form------------------------------------------------------->
 
-<form name="thirdform" id="form3" action="" method="POST"> 
+<form name="thirdform" id="form3" action="scanners" method="POST"> 
+@csrf
 <label><h4>Add Scanner</h4></label><br>
 
 
@@ -565,12 +566,12 @@ function fun2()//to hide all form elements
 				  <div class="form-group row">
                   <div class="col-md-6">
                   <label for="memory" class="register-container__label">Enter Man Serial No.:</label>
-                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  <input name="mserial" type="text" class="form-control register-container__input" id="ram" required>
                   </div>
                  
                   <div class="col-md-6">
                   <label for="memory" class="register-container__label">Enter Govt Serial No.:</label>
-                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+                  <input name="gserial" type="text" class="form-control register-container__input" id="rom" required>
 
                   </div>
 
@@ -584,18 +585,10 @@ function fun2()//to hide all form elements
 					<option value=""> Select scanning mode </option>
 					<option value="Flatbed"> Flatbed</option>
                     <option value="ADF">ADF</option>
-                    
-
 
                     </select>
 
 				</div>
-                 
-                  <div class="col-md-6">
-                  <label for="memory" class="register-container__label">Enter ROM:</label>
-                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
-
-                  </div>
 
                   </div>
 				  <div class="form-group col-md-8">
@@ -616,7 +609,7 @@ function fun2()//to hide all form elements
             <label for="message-text" class="col-form-label">Other Specs:</label>
             <textarea name="specs" class="form-control" id="specs"></textarea>
           </div>
-		  <button type="button" name="submit" class="btn btn-primary">Add Inventory</button>
+		  <button type="submit" name="submit" class="btn btn-primary">Add Inventory</button>
        	  
 		
 

@@ -1043,11 +1043,11 @@ function fun2()//to hide all form elements
                  
                   <div class="col-md-6">
                   <div class="col-md-6">
-                  <label for="memory" class="register-container__label" name="opt">Select Connection Interface:</label>
+                  <label for="memory" class="register-container__label" >Select Connection Interface:</label>
 								<div class="multipleSelection">
 										<div class="selectBox" 
 											onclick="showCheckboxes()">
-											<select>
+											<select name="opt">
 												<option>Select options</option>
 											</select>
 											<div class="overSelect"></div>

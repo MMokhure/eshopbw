@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,14 @@ Route::get('/', function () {
 
 Route::get('home',[HomeController::class, 'index'])->name('home.index');
 Route::get('new_user',[HomeController::class, 'adduser'])->name('new_user.adduser');
+
+
 Route::get('new_inventory',[HomeController::class, 'addinventory'])->name('new_inventory.addinventory');
+
+//Crud route
+Route::post('desktops',[PostController::class, 'store']);
+
+
 Route::get('manage_inventory',[HomeController::class, 'inventory'])->name('manage_inventory.inventory');
 Route::get('manage_stations',[HomeController::class, 'stations'])->name('manage_stations.stations');
 Route::get('inventory_classification',[HomeController::class, 'classification'])->name('inventory_classification.classification');

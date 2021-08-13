@@ -412,8 +412,10 @@ function fun2()//to hide all form elements
 
 
 
-<!------------------------------------------1---Computer Sever------------------------------------------------------------------------>
-<form  method="post"  name="firstform" id="form1" action="" method="POST">
+<!------------------------------------------1---Computer Desktop  Form------------------------------------------------------------------------>
+
+<form  method="post"  name="firstform" id="form1" action="desktops">
+@csrf
 <label><h4>Add Computer(Desktop)</h4></label><br>
 
 				  <div class="form-group col-md-12">
@@ -425,12 +427,12 @@ function fun2()//to hide all form elements
 				  <div class="form-group row">
                   <div class="col-md-6">
                   <label for="memory" class="register-container__label">Enter Man Serial No.:</label>
-                  <input name="ram" type="text" class="form-control register-container__input" id="ram" required>
+                  <input name="mserail" type="text" class="form-control register-container__input" id="ram" required>
                   </div>
                  
                   <div class="col-md-6">
                   <label for="memory" class="register-container__label">Enter Govt Serial No.:</label>
-                  <input name="rom" type="text" class="form-control register-container__input" id="rom" required>
+                  <input name="gserial" type="text" class="form-control register-container__input" id="rom" required>
 
                   </div>
 
@@ -460,7 +462,7 @@ function fun2()//to hide all form elements
                   </div> 
                   <div class="col-md-6">
                     <label for="type" class="search-container__label">SELECT CURRENT STATUS</label>
-                    <select class="form-control search-container__input" id="type" name="type" required>
+                    <select class="form-control search-container__input" id="type" name="status" required>
 					<option value=""> Select current status</option>
 					<option value="functional"> Functional</option>
                     <option value="non-functional">Non-Functional</option>
@@ -474,9 +476,9 @@ function fun2()//to hide all form elements
 
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Other Specs:</label>
-            <textarea name="specs" class="form-control" id="specs"></textarea>
+            <textarea name="other" class="form-control" id="specs"></textarea>
           </div>
-		  <button type="button" name="submit" class="btn btn-primary">Add Inventory</button>
+		  <button type="submit" name="submit" class="btn btn-primary">Add Inventory</button>
 </form>
 <!----------------------------------------------------1------END COMPUTER ---------------------------------------------------------------------------------------->
 

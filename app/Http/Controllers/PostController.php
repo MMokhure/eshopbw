@@ -35,6 +35,25 @@ public function store(Request $request){
         }
 }
 
+public function storeLaptop(Request $request){   
+    $querry = DB::table('laptops')->insert([
+        'model' => $request->input('model'),
+        'mserial'=> $request->input('mserial'),
+        'gserial' => $request->input('gserial'),
+        'ram'=> $request->input('ram'),
+        'rom'=> $request->input('rom'),
+        'operating_system'=> $request->input('operating_system'),
+        'status'=> $request->input('status'),
+        'others'=> $request->input('others')
+    ]);
+
+    if($querry){
+        return back()->with('success', 'Data have been successfuly inserted');
+    }else{
+        return back()->with('fail', 'Something went went');
+    }
+}
+
     public function show(){
         return view('desktops.show',compact('desktop'));
     }

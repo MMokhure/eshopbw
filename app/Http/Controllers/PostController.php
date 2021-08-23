@@ -93,6 +93,24 @@ public function addPrinter(Request $request){
     }
 }
 
+public function addHub(Request $request){   
+    $querry = DB::table('hubs')->insert([
+        'model' => $request->input('model'),
+        'mserial'=> $request->input('mserial'),
+        'gserial' => $request->input('gserial'),
+        'port'=> $request->input('port'),
+        'date_rate'=> $request->input('date_rate'),
+        'status'=> $request->input('status'),
+        'others'=> $request->input('others')
+    ]);
+    if($querry){
+        return back()->with('success', 'Data have been successfuly inserted');
+    }else{
+        return back()->with('fail', 'Something went went');
+    }
+}
+
+
 
     public function show(){
         return view('desktops.show',compact('desktop'));

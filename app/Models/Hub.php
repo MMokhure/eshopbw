@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Hub extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'model','mserial','gserial','port','data_rate','status','others'
     ];

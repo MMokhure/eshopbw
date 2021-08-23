@@ -98,7 +98,7 @@
 
 									<h2>	Number of Available Stations: 20</h2>
 								
-								</center>
+						</center>
 								<br/>
 
 			<div class="row">

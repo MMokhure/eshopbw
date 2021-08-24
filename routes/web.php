@@ -30,6 +30,7 @@ Route::post('laptops',[PostController::class, 'storeLaptop']);
 Route::post('scanners',[PostController::class, 'addScanner']);
 Route::post('printers',[PostController::class, 'addPrinter']);
 Route::post('switches', [PostController::class, 'addHub']);
+Route::post('monitors', [PostController::class, 'addMonitor']);
 
 
 Route::get('manage_inventory',[HomeController::class, 'inventory'])->name('manage_inventory.inventory');

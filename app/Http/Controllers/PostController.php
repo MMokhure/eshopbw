@@ -110,6 +110,22 @@ public function addHub(Request $request){
     }
 }
 
+public function addMonitor(Request $request){   
+    $querry = DB::table('')->insert([
+        'model' => $request->input('model'),
+        'mserial'=> $request->input('mserial'),
+        'gserial' => $request->input('gserial'),
+        'screen_size' => $request->input('screen_size'),
+        'status'=> $request->input('status'),
+        'others'=> $request->input('others')
+    ]);
+    if($querry){
+        return back()->with('success', 'Data have been successfuly inserted');
+    }else{
+        return back()->with('fail', 'Something went went');
+    }
+}
+
 
 
     public function show(){

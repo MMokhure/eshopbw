@@ -111,7 +111,7 @@ public function addHub(Request $request){
 }
 
 public function addMonitor(Request $request){   
-    $querry = DB::table('')->insert([
+    $querry = DB::table('monitors')->insert([
         'model' => $request->input('model'),
         'mserial'=> $request->input('mserial'),
         'gserial' => $request->input('gserial'),

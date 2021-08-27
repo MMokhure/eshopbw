@@ -226,6 +226,7 @@
 							</tr>
 						</thead>
 						<tbody>
+							
 							<tr>
 								<th scope="row">1</th>
 								<td>BROADHURST MAGISTRATE COURT</td>
@@ -299,30 +300,31 @@
 
 </div>
 						
-<form method="POST">
+<form method="POST" action="stations">
+	@csrf
 	<div class="row">
 		<div class="col-md-4 col-sm-12">
 			<div class="form-group">
 				<label>Station Name</label>
-				<input type="text" class="form-control">
+				<input type="text" name= "station_name" class="form-control">
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-12">
 			<div class="form-group">
 				<label>Station Location</label>
-				<input type="text" class="form-control">
+				<input type="text" name= "station_location" class="form-control">
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-12">
 			<div class="form-group">
 				<label>Number of Work-Rooms</label>
-				<input type="text" class="form-control">
+				<input type="number" min="1" name= "No_of_workrooms" class="form-control">
 			</div>
 		</div>
 	</div>
 
 	<div class="modal-footer justify-content-center">
-		<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-plus"> </i> Add Station</button>
+		<button type="submit" name="submit" class="btn btn-success" data-dismiss="modal"><i class="fa fa-plus"> </i> Add Station</button>
 	</div>
 							</form>
 						</div>

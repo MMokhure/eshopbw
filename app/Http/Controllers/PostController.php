@@ -54,6 +54,42 @@ public function storeLaptop(Request $request){
     }
 }
 
+public function addServer(Request $request){   
+    $querry = DB::table('servers')->insert([
+        'model' => $request->input('model'),
+        'mserial'=> $request->input('mserial'),
+        'gserial' => $request->input('gserial'),
+        'ram'=> $request->input('ram'),
+        'rom'=> $request->input('rom'),
+        'operating_system'=> $request->input('operating_system'),
+        'status'=> $request->input('status'),
+        'others'=> $request->input('others')
+    ]);
+
+    if($querry){
+        return back()->with('success', 'Data have been successfuly inserted');
+    }else{
+        return back()->with('fail', 'Something went went');
+    }
+}
+
+public function addTablet(Request $request){   
+    $querry = DB::table('tablets')->insert([
+        'model' => $request->input('model'),
+        'mserial'=> $request->input('mserial'),
+        'gserial' => $request->input('gserial'),
+        'ram'=> $request->input('ram'),
+        'rom'=> $request->input('rom'),
+        'status'=> $request->input('status'),
+        'others'=> $request->input('others')
+    ]);
+
+    if($querry){
+        return back()->with('success', 'Data have been successfuly inserted');
+    }else{
+        return back()->with('fail', 'Something went went');
+    }
+}
 public function addScanner(Request $request){   
     $querry = DB::table('scanners')->insert([
         'model' => $request->input('model'),
@@ -104,6 +140,56 @@ public function addPrinter(Request $request){
         'type'=> $request->input('status')
     ]);
 
+    if($querry){
+        return back()->with('success', 'Data have been successfuly inserted');
+    }else{
+        return back()->with('fail', 'Something went went');
+    }
+}
+
+public function addHub(Request $request){   
+    $querry = DB::table('hubs')->insert([
+        'model' => $request->input('model'),
+        'mserial'=> $request->input('mserial'),
+        'gserial' => $request->input('gserial'),
+        'port'=> $request->input('port'),
+        'date_rate'=> $request->input('date_rate'),
+        'status'=> $request->input('status'),
+        'others'=> $request->input('others')
+    ]);
+    if($querry){
+        return back()->with('success', 'Data have been successfuly inserted');
+    }else{
+        return back()->with('fail', 'Something went went');
+    }
+}
+
+public function addMonitor(Request $request){   
+    $querry = DB::table('monitors')->insert([
+        'model' => $request->input('model'),
+        'mserial'=> $request->input('mserial'),
+        'gserial' => $request->input('gserial'),
+        'screen_size' => $request->input('screen_size'),
+        'status'=> $request->input('status'),
+        'others'=> $request->input('others')
+    ]);
+    if($querry){
+        return back()->with('success', 'Data have been successfuly inserted');
+    }else{
+        return back()->with('fail', 'Something went went');
+    }
+}
+
+public function addRouter(Request $request){   
+    $querry = DB::table('routers')->insert([
+        'model' => $request->input('model'),
+        'mserial'=> $request->input('mserial'),
+        'gserial' => $request->input('gserial'),
+        'scan_mode' => $request->input('scan_mode'),
+        'rom' => $request->input('rom'),
+        'status'=> $request->input('status'),
+        'others'=> $request->input('others')
+    ]);
     if($querry){
         return back()->with('success', 'Data have been successfuly inserted');
     }else{

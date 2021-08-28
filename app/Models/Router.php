@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Hub extends Model
+class Router extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'model','mserial','gserial','port','data_rate','status','others'
+        'model','mserial','gserial','scan_mode','rom','status','others'
     ];
 }

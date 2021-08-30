@@ -15,8 +15,16 @@ use App\Http\Controllers\StationController;
 |
 */
 
+//.. longin routes
+Auth::routes();
+
+Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+Route::get('home', [HomeController::class, 'index'])->name('home');
+Route::post('logout', [UserController::class, 'logout'])->name('logout');
+
+/////////////////////////////////////////////////////
 Route::get('/', function () {
-    return view('home');
+    return view('home'); 
 });
 
 Route::get('home',[HomeController::class, 'index'])->name('home.index');
@@ -42,5 +50,9 @@ Route::post('stations', [StationController::class, 'addStation']);
 
 
 Route::get('manage_inventory',[HomeController::class, 'inventory'])->name('manage_inventory.inventory');
-Route::get('manage_stations',[HomeController::class, 'stations'])->name('manage_stations.stations');
+Route::get('manage_st
+ations',[HomeController::class, 'stations'])->name('manage_stations.stations');
 Route::get('inventory_classification',[HomeController::class, 'classification'])->name('inventory_classification.classification');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
